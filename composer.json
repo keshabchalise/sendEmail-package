@@ -15,5 +15,12 @@
         "psr-4": {
             "Keshab\\SendEmail\\": "src/"
         }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Keshab\\SendEmail\\SendEmailServiceProvider"
+            ]
+        }
     }
 }
