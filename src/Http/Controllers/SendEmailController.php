@@ -26,7 +26,7 @@ class SendEmailController extends Controller
         $email = $request->email;
         $sub = $request->subject;
 
-        Email::create(['email'=>$email,'subject'=>$sub,'message'=>$message]);
+        Email::create(['receiver'=>$email,'subject'=>$sub,'message'=>$message]);
 
         Mail::to($email)->send(new SendMessageMailable($message,$sub));
 
