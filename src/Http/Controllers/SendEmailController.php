@@ -32,7 +32,7 @@ class SendEmailController extends Controller
 
         if(count(Mail::failures())>0){
             foreach (Mail::failures() as $failure){
-                $fail[] = $failure;
+                $fail = $failure;
             }
             return redirect()->back()->with('error',$fail);
         }
